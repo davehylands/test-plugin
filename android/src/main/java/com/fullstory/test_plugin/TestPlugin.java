@@ -32,8 +32,15 @@ public class TestPlugin implements FlutterPlugin, MethodCallHandler {
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+    android.util.Log.e("fullstory", "TestPlugin::onMethodCall call.method = " + call.method);
+
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
+    } else if (call.method.equals("getCustomString")) {
+      // Replace the following line with a call info a java library
+      String str = "My Custom String";
+      Object obj = str;
+      result.success(obj);
     } else {
       result.notImplemented();
     }
