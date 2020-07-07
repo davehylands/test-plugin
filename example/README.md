@@ -1,16 +1,16 @@
-# test_plugin_example
+# test_plugin
 
-Demonstrates how to use the test_plugin plugin.
+Created using the command:
+```
+flutter create --org com.fullstory --template=plugin -a java test_plugin
+```
 
-## Getting Started
+Install flutter by unzipping: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.12.13+hotfix.9-stable.zip
 
-This project is a starting point for a Flutter application.
+Unzip and add the flutter/bin directory to your PATH.
 
-A few resources to get you started if this is your first Flutter project:
+Start the android emulator (64-bit).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+You can then cd into the example directory and run the `run-android.sh` script to run the flutter app in the emulator.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You should see the custom string displayed in the emulator.
