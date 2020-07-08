@@ -7,6 +7,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import com.fullstory.testlib.MyClass;
 
 /** TestPlugin */
 public class TestPlugin implements FlutterPlugin, MethodCallHandler {
@@ -37,8 +38,10 @@ public class TestPlugin implements FlutterPlugin, MethodCallHandler {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals("getCustomString")) {
-      // Replace the following line with a call info a java library
-      String str = "My Custom String";
+      //=====
+      MyClass myClass = new MyClass();
+      String str = myClass.somelIbraryMethod();
+      //=====
       Object obj = str;
       result.success(obj);
     } else {
